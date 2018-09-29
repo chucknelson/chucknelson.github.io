@@ -1,0 +1,95 @@
+@import "normalize";
+@import "starry-sky";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+.hidden {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+// The following SCSS requires bourbon and neat
+
+#contentArea {
+	@include outer-container;
+}
+
+#contentArea h1 {
+    color: #FFF;
+}
+
+#profile {
+    @include span-columns(9);
+    @include shift(1.5);
+    @include pad(16px);
+    margin-top: 16px;
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 5px;
+}
+
+#profile h1, h3, p {
+	margin: 0;
+}
+
+#profile h1 {
+	font-size: 3em;
+	color: #222;
+}
+
+#profile a {
+	text-decoration: none;
+}
+
+#profile .subtitle {
+	font-size: 1em;
+	color: #555;
+}
+
+#profile img.framedImage {
+	border-radius: 4px;
+	border: 2px solid #222;
+}
+
+#myName {
+	@include span-columns(6 of 9);
+}
+
+#gravatar {
+	@include span-columns(3 of 9);
+	text-align: right;
+}
+
+#badges {
+	@include span-columns(9 of 9);
+	
+}
+
+#badges .badge {
+	@include span-columns(3 of 9);
+	text-align: center;
+}
+
+#badges-intro {
+	padding: 4px 0;
+	border-bottom: 1px solid #BBB;
+}
+
+#linkedin img {
+	margin-top: 0.8em;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 8px;
+	width: 100%;
+	text-align: center;
+	color: #BBB;
+}
